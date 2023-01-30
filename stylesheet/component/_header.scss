@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans:ital,wght@1,200&family=Roboto:ital,wght@1,900&display=swap");
+
+body {
+  font-family: "Kalam", "Noto Sans";
+}
+
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #f9c745 !important;
+}
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link:hover {
+  color: #f9c745 !important;
+}
+.btn .btn-outline-dark:hover {
+  color: #f9c745;
+}
+.bg-cover {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn1 {
+  display: none;
+}
+.dialog:hover {
+  cursor: pointer;
+}
+.dialog:hover .btn2 {
+  display: none;
+}
+.dialog:hover .btn1 {
+  display: inline;
+}
+.dialog-border-bottom {
+  border: 2px solid black;
+  padding: 8px 23px 8px 23px;
+  margin-bottom: 10px;
+  // position: relative;
+  width: 170px;
+  left: 80%;
+  bottom: 170px;
+}
+.dialog-border-bottom:before {
+  border-color: black transparent transparent;
+  border-style: solid;
+  border-width: 12px;
+  bottom: -25px;
+  content: "";
+  height: 0px;
+  /* 必須指定，否則會變梯形 */
+  position: absolute;
+  left: 65px;
+  width: 0px;
+}
+.dialog-border-bottom:after {
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 12px;
+  content: "";
+  height: 0px;
+  /* 必須指定，否則會變梯形 */
+  position: absolute;
+  left: 65px;
+  bottom: -22px;
+  width: 0px;
+}
+.desinger {
+  display: none;
+}
+.card:hover .desinger {
+  display: inline;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.dog01_img_hover,
+.dog04_img_hover,
+.dog08_img_hover {
+  display: none;
+}
+
+.dog01:hover .dog01_img,
+.dog04:hover .dog04_img,
+.dog08:hover .dog08_img {
+  display: none;
+}
+.dog01:hover .dog01_img_hover,
+.dog04:hover .dog04_img_hover,
+.dog08:hover .dog08_img_hover {
+  display: inline-block;
+}
+.dog01:hover .dog01_btn,
+.dog04:hover .dog04_btn,
+.dog08:hover .dog08_btn {
+  color: #f9c745;
+}
+.dog01:hover,
+.dog04:hover,
+.dog08:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.list-unstyled li {
+  height: 20px;
+}
+.works_All .symbol,
+.works_Meili .symbol,
+.works_Zoe .symbol,
+.works_Michaek .symbol,
+.works_Birdy .symbol {
+  position: absolute;
+  z-index: -1;
+}
+
+.works_All .word,
+.works_Meili .word,
+.works_Zoe .word,
+.works_Michaek .word,
+.works_Birdy .word {
+  position: absolute;
+  left: 0px;
+  transition: left 1s;
+}
+.works_All:hover,
+.works_Meili:hover,
+.works_Zoe:hover,
+.works_Michaek:hover,
+.works_Birdy:hover {
+  color: #f9c745;
+}
+
+.works_All:hover .symbol,
+.works_Meili:hover .symbol,
+.works_Zoe:hover .symbol,
+.works_Michaek:hover .symbol,
+.works_Birdy:hover .symbol {
+  z-index: 1;
+}
+
+.works_All:hover .word,
+.works_Meili:hover .word,
+.works_Zoe:hover .word,
+.works_Michaek:hover .word,
+.works_Birdy:hover .word {
+  left: 23.23px;
+}
+.page-link:hover {
+  color: #f9c745 !important;
+}
+.page-link:active {
+  color: #f9c745 !important;
+}
+.moreLink:hover {
+  color: #f9c745 !important;
+}
+.btn:hover {
+  background-color: #f9c745 !important;
+  color: black;
+  border-color: #f9c745;
+}
+.adopt:hover {
+  box-shadow: 2px 5px 2px black;
+  color: black !important;
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    border-bottom: 3px solid #f9c745;
+  }
+  .works_All .symbol,
+  .works_Meili .symbol,
+  .works_Zoe .symbol,
+  .works_Michaek .symbol,
+  .works_Birdy .symbol {
+    position: relative;
+  }
+
+  .works_All .word,
+  .works_Meili .word,
+  .works_Zoe .word,
+  .works_Michaek .word,
+  .works_Birdy .word {
+    position: relative;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheet/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.css"
+    />
+  </head>
+  <body class="">
+    <div class="d-flex">
+      <aside class="sidebar vh-100 border-end d-flex bg-light flex-column pt-4">
+        <div class="px-4">
+          <strong>福隆驛站 - 管理後台</strong>
+        </div>
+        <div class="overflow-auto mt-3">
+          <div>
+            <a href="home.html" class="sidebar-link"
+              ><i class="bi bi-house-fill"></i><span class="ms-3">首頁</span></a
+            >
+          </div>
+          <div>
+            <a
+              class="sidebar-link"
+              id="orderManage"
+              data-bs-toggle="collapse"
+              href="#orderMenu"
+              ><i class="bi bi-card-list"></i><span class="ms-3">訂單管理</span
+              ><span class="abcd"> <i class="bi bi-caret-down ms-5"></i></span>
+            </a>
+          </div>
+          <div class="collapse" id="orderMenu">
+            <div>
+              <a href="orders.html" class="sidebar-link"
+                ><span class="ps-5">訂單列表</span></a
+              >
+            </div>
+            <div>
+              <a href="order.html" class="sidebar-link"
+                ><span class="ps-5">單一訂單</span></a
+              >
+            </div>
+          </div>
+          <div>
+            <a href="#" class="sidebar-link"
+              ><i class="bi bi-link"></i><span class="ms-3">參考連結</span></a
+            >
+          </div>
+        </div>
+
+        <a href="" class="mt-auto text-decoration-none sidebar-link">
+          <i class="bi bi-door-open"></i>
+          <span class="ms-3">登出</span>
+        </a>
+      </aside>
+
+      <div class="main">
+        <div class="border-bottom sticky-top bg-white w-100">
+          <a href="" class="py-4 px-4 d-inline-block border-end" id="toggle-btn"
+            ><i class="bi bi-arrows-angle-expand"></i
+          ></a>
+        </div>
+        <div class="p-4">
+          <!-- 三個標題卡片 -->
+          <div class="row g-4 mb-4">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body text-end">
+                  <h5 class="display-6">收入</h5>
+                  <p class="income display-4">123</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body text-end">
+                  <h5 class="display-6">支出</h5>
+                  <p class="expenditure display-4">456</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body text-end">
+                  <h5 class="display-6">營業額</h5>
+                  <p class="revenue display-4">789</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 數據圖  -->
+          <div class="d-flex justify-content-center">
+            <div class="w-75">
+              <div class="mb-4" id="yoy"></div>
+              <div class="mb-4" id="mom"></div>
+              <div class="mb-4" id="bike"></div>
+            </div>
+          </div>
+
+          <!-- 訂單S -->
+          <div class="card shadow-sm">
+            <div class="card-header bg-white">
+              <div class="input-group">
+                <span class="input-group-text bg-white border-0">
+                  <i class="bi bi-search"></i>
+                </span>
+
+                <input
+                  type="text"
+                  class="form-control shadow-none border-0"
+                  placeholder="search"
+                />
+              </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover text-nowrap">
+                        <thead class="bg-light">
+                          <tr class="">
+                            <th scope="col" class="ps-4">訂單編號</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">用戶姓名</th>
+                            <th scope="col">預定日期</th>
+                            <th scope="col">付款狀態</th>
+                            <th scope="col">金額</th>
+                            <th scope="col" >編輯</th>
+                          </tr>
+                        </thead>
+                        <tbody class="">
+                          <tr>
+                            <td class="ps-4">Mark</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>900</td>
+                            <td class="">
+                              <button class="btn btn-outline-primary" type="button">
+                                <i class="bi bi-pencil"></i>&nbsp編輯
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                </div>
+            </div>
+            
+            <div class="card-footer bg-white border-0">
+              <nav aria-label="Page navigation example" class="me-5">
+                <ul class="pagination justify-content-end d-flex">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- 訂單 E -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Load d3.js and c3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+  <!-- C3 D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+  <script src="../all.js"></script>
+</html>

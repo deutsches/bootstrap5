@@ -1,0 +1,56 @@
+$sidebar-width: 280px;
+
+//行動版
+.sidebar {
+  width: $sidebar-width;
+  margin-left: -$sidebar-width;
+  transition: margin-left 0.25s;
+  position: fixed;
+  top: 0;
+  .sidebar-link {
+    color: $dark;
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    &:hover {
+      background-color: antiquewhite;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+}
+.sidebar-toggle {
+  .sidebar {
+    margin-left: 0;
+  }
+  .main{
+    margin-left: $sidebar-width;
+  }
+}
+//桌面板
+@include media-breakpoint-up(lg) {
+  .sidebar {
+    margin-left: 0;
+    width: $sidebar-width;
+  }
+  .main {
+    width: calc(100vw - #{$sidebar-width});
+    margin-left: $sidebar-width;
+    transition: margin-left 0.25s;
+  }
+  .sidebar-toggle {
+    .sidebar {
+      margin-left: -$sidebar-width;
+    }
+    .main {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+.rotated {
+  display: inline-block;
+  transform: rotate(180deg);
+}
